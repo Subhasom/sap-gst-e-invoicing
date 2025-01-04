@@ -42,7 +42,9 @@ DATA(lv_invoice_number) = 'INV123'. " Replace with dynamic data
 *
 " You need to enter them line by as shown below:
 
-APPEND |[ { "transaction": { "Version": "1.1", "TranDtls": { "TaxSch": "GST", "SupTyp": "B2B", "RegRev": "Y", "EcmGstin": null, "IgstOnIntra": "N", "DocNumer": "{ lv_invoice_number }" } } }] | TO lt_file_table.
+APPEND |[ { "transaction": { "Version": "1.1", "TranDtls": { "TaxSch": "GST", "SupTyp": "B2B", "
+                              RegRev": "Y", "EcmGstin": null, "IgstOnIntra": "N", "DocNumer": "{ 
+                              lv_invoice_number }" } } }] | TO lt_file_table.
 
 CALL METHOD cl_rsan_ut_appserv_file_writer=>appserver_file_write
   EXPORTING
